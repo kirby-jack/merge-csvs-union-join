@@ -34,9 +34,11 @@ python3 main.py -d '/PATH/TO/CSV/FILES' -o 'OUTPUT_NAME' -s 'SEPARATOR'
 
 **Parameter Usage**
 
-`OUTPUT_NAME` should not include a period `.`
+Replace `'/PATH/TO/CSV/FILES'` with the full path to the directory containing the CSV files you wish to merge. 
 
-Available `SEPARATOR` values include:
+Replace `OUTPUT_NAME` with your desired output name. `OUTPUT_NAME` should not include a period `.`
+
+Replace `SEPARATOR` with a valid separator value. Available `SEPARATOR` values include:
 * comma
 * ','
 * semicolon
