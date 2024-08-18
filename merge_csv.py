@@ -57,13 +57,19 @@ def merge_csv(directory, output, separator):
                             reader = csv.DictReader(readCsvFile, delimiter=separator)
                             
                             for rowReader in reader:
-                            
-                                # sort by fieldnames (this is for our set as we our hash lookup to have consistent orders, dictWriter does not need it sorted as it is a dictionary)
+                                
+                                # if csv is missing columns, add empty values, this later allows for duplciate checking
+                                for fieldname in fieldnames:
+                                    if fieldname not in rowReader:
+                                        rowReader[fieldname] = ''
+
+                                # sort by fieldnames (the set hash lookup needs consistent ordering, dictWriter does not need it sorted as it is a dictionary)
                                 rowSet = tuple(rowReader.items()) # you cannot add dicts to sets, you need to add a tuple
                                 rowSet= tuple(sorted(rowSet, key = lambda i: fieldnames.index(i[0])))
                                 
                                 if rowSet in writtenRows:
-                                    print("\nSkipping duplicate row\n" + str(rowReader) + "\n")
+                                    print("\nSkipping duplicate row number ")
+                                    print(rowReader)
                                 else:
                                     writtenRows.add(rowSet)  # add to set
                                     csvwriter.writerow(rowReader) # write to buffer/file
