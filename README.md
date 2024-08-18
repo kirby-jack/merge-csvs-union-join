@@ -25,8 +25,7 @@ An illustration of a union join can be found below:
 `git clone https://github.com/kirby-jack/merge-csvs-union-join.git`
 
 `cd merge-csvs-union-join`
-<br>
-<br>
+
 **Step Two - Launch Script**
 ```
 python3 main.py -d '/PATH/TO/CSV/FILES' -o 'OUTPUT_NAME' -s 'SEPARATOR'
@@ -47,8 +46,6 @@ Replace `SEPARATOR` with a valid separator value. Available `SEPARATOR` values i
 * ' '
 * tab
 * '\t'
-<br>
-<br>
 
 **Step Three - Finished**
 
