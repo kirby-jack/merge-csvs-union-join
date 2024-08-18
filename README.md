@@ -49,7 +49,7 @@ Replace `SEPARATOR` with a valid separator value. Available `SEPARATOR` values i
 
 **Step Three - Finished**
 
-Your specified directory will now contain a merged csv called `OUTPUT.csv` (depending on your chosen `OUTPUT` name).
+Your specified directory will now contain a merged csv called `OUTPUT_NAME.csv` (depending on your chosen `OUTPUT_NAME` name).
 
 ## Help
 Run 
